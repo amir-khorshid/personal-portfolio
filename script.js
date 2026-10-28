@@ -45,11 +45,11 @@ function enterGameKey(key) {
 
     if (codePosition === konamiCode.length) {
         gameUnlocked = true;
-        gameMessage.textContent = "🎮 PLAYER 1 UNLOCKED!";
+        gameMessage.textContent = "🎮 SECRET PAGE UNLOCKED!";
         codeProgress.textContent = "ACCESS GRANTED";
 
         setTimeout(() => {
-			window.location.href = "gaming.html";
+			window.location.href = "hobbies.html";
 		}, 1200);
     }
 }
