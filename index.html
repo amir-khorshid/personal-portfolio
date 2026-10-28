@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amir | Computer Engineering</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+    <a href="#home" class="logo" aria-label="Back to homepage">
+    AK<span class="logo-accent">/></span>
+	</a>
+
+    <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="resume.pdf">RESUME</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="terminal-text">&gt; hello_world()</p>
+
+        <h1>
+			Amir <span>Khorshid.</span>
+		</h1>
+
+		<h2>Computer Engineering Student</h2>
+
+		<p class="hero-university">
+			California State University, Sacramento
+		</p>
+
+		<p class="hero-description">
+			Interested in embedded systems, hardware,
+			networking, and building practical solutions.
+		</p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="button primary">
+                View Projects →
+            </a>
+
+            <a href="resume.pdf" class="button secondary">
+                View Resume
+            </a>
+        </div>
+
+    </div>
+
+<!-- ================= TECHNICAL DASHBOARD ================= -->
+
+	<div class="hero-dashboard">
+
+		<div class="dashboard-header">
+			<span class="dashboard-title">SYSTEM_OVERVIEW</span>
+			<span class="dashboard-status">
+				<span class="status-dot"></span>
+				ONLINE
+			</span>
+		</div>
+
+		<div class="dashboard-body">
+
+			<p class="dashboard-comment">// USER INFORMATION</p>
+
+			<div class="dashboard-line">
+				<span class="dashboard-key">user</span>
+				<span class="dashboard-value">amir</span>
+			</div>
+
+			<div class="dashboard-line">
+				<span class="dashboard-key">role</span>
+				<span class="dashboard-value">computer_engineering</span>
+			</div>
+
+			<div class="dashboard-line">
+				<span class="dashboard-key">university</span>
+				<span class="dashboard-value">sacramento_state</span>
+			</div>
+
+			<div class="dashboard-divider"></div>
+
+			<p class="dashboard-comment">// PROJECT DIRECTORY</p>
+
+			<a href="projects/homelab.html" class="dashboard-project">
+				<span class="project-indicator"></span>
+				<span>homelab/</span>
+				<span class="project-arrow">↗</span>
+			</a>
+
+			<a href="projects/fpga.html" class="dashboard-project">
+				<span class="project-indicator"></span>
+				<span>fpga_verilog/</span>
+				<span class="project-arrow">↗</span>
+			</a>
+
+			<a href="projects/networking.html" class="dashboard-project">
+				<span class="project-indicator"></span>
+				<span>networking/</span>
+				<span class="project-arrow">↗</span>
+			</a>
+
+			<div class="dashboard-divider"></div>
+
+			<div class="dashboard-footer">
+				<span>amir@portfolio:~$</span>
+				<span class="cursor">█</span>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <p class="section-number">01.</p>
+    <h2 class="section-title">ABOUT ME</h2>
+
+    <div class="about-grid">
+
+        <img
+            src="images/sac-state.jpg"
+            alt="Sacramento State campus"
+            class="about-image"
+        >
+
+        <div class="about-text">
+
+            <h3>
+                Computer Engineering at
+                Sacramento State.
+            </h3>
+
+            <p>
+                I'm a Computer Engineering student who enjoys learning
+                how things work, solving problems, and building hands-on
+                projects.
+            </p>
+
+            <p>
+                I'm especially interested in embedded systems,
+                networking, hardware, Linux, and self-hosted
+                infrastructure.
+            </p>
+
+        </div>
+
+        <div class="interests">
+
+            <h4>INTERESTS</h4>
+
+            <ul>
+                <li>Embedded Systems</li>
+                <li>Networking</li>
+                <li>Hardware / FPGA</li>
+                <li>Linux & Self-Hosting</li>
+                <li>Systems Programming</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="section">
+
+    <p class="section-number">02.</p>
+    <h2 class="section-title">FEATURED PROJECTS</h2>
+
+    <div class="project-grid">
+
+
+        <!-- HOME SERVER -->
+
+        <article class="project-card">
+
+            <img
+                src="images/homelab.jpg"
+                alt="Home server"
+            >
+
+            <div class="project-content">
+
+                <h3>Home Server / Homelab</h3>
+
+                <p>
+                    Self-hosted Ubuntu server running Docker services
+                    for networking, monitoring, and administration.
+                </p>
+
+                <div class="tags">
+                    <span>Linux</span>
+                    <span>Docker</span>
+                    <span>Networking</span>
+                </div>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+        </article>
+
+
+        <!-- FPGA -->
+
+        <article class="project-card">
+
+            <img
+                src="images/fpga.jpg"
+                alt="FPGA waveform"
+            >
+
+            <div class="project-content">
+
+                <h3>FPGA & Verilog Projects</h3>
+
+                <p>
+                    Digital logic circuits designed, simulated,
+                    tested, and implemented using Verilog and FPGA
+                    hardware.
+                </p>
+
+                <div class="tags">
+                    <span>Verilog</span>
+                    <span>FPGA</span>
+                    <span>Digital Logic</span>
+                </div>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+        </article>
+
+
+        <!-- NETWORKING -->
+
+        <article class="project-card">
+
+            <img
+                src="images/wireshark.jpg"
+                alt="Wireshark network analysis"
+            >
+
+            <div class="project-content">
+
+                <h3>Network Analysis</h3>
+
+                <p>
+                    Using Wireshark to inspect network traffic,
+                    understand protocols, and troubleshoot
+                    network behavior.
+                </p>
+
+                <div class="tags">
+                    <span>Wireshark</span>
+                    <span>Networking</span>
+                    <span>TCP/IP</span>
+                </div>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="section">
+
+    <p class="section-number">03.</p>
+    <h2 class="section-title">SKILLS & TECHNOLOGIES</h2>
+
+    <div class="skills-grid">
+
+        <div>C / C++</div>
+        <div>Verilog</div>
+        <div>Linux</div>
+        <div>Networking</div>
+
+        <div>Git / GitHub</div>
+        <div>Docker</div>
+        <div>FPGA</div>
+        <div>Assembly</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact">
+
+    <p class="section-number">04.</p>
+    <h2 class="section-title">CONTACT</h2>
+
+    <h3>Let's connect!</h3>
+
+    <p>
+        I'm always open to discussing projects,
+        opportunities, or technology.
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="mailto:amir.khorshiddust@gmail.com">
+            Email
+        </a>
+
+        <a href="YOUR_LINKEDIN" target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="YOUR_GITHUB" target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+        <strong>AMIR</strong>
+        <p>Computer Engineering Student</p>
+    </div>
+
+    <p>© 2026 Amir</p>
+	
+	<button id="game-button" aria-label="Secret gaming Easter egg" title="???">
+    🕹️
+	</button>
+	
+</footer>
+
+
+<!-- Secret gaming Easter egg -->
+<div id="game-modal" class="game-modal" hidden>
+    <div class="game-panel">
+
+        <button id="close-game" class="close-game" aria-label="Close">
+            ×
+        </button>
+
+        <p class="game-label">SECRET TERMINAL</p>
+        <h2>ENTER ACCESS CODE</h2>
+
+        <p id="game-message">Enter the cheat code.</p>
+
+        <div class="code-progress" id="code-progress">
+            ○ ○ ○ ○ ○ ○ ○ ○ ○ ○
+        </div>
+
+        <div class="game-controls">
+            <button data-key="ArrowUp">↑</button>
+
+            <div>
+                <button data-key="ArrowLeft">←</button>
+                <button data-key="ArrowDown">↓</button>
+                <button data-key="ArrowRight">→</button>
+            </div>
+
+            <div class="game-ab">
+                <button data-key="b">B</button>
+                <button data-key="a">A</button>
+            </div>
+        </div>
+
+        <button id="reset-game" class="reset-game">
+            RESET
+        </button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
