@@ -1,0 +1,622 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ========== COLORS ========== */
+
+:root {
+    --bg: #080e16;
+    --surface: #101925;
+    --surface2: #151e2d;
+    --border: #2a3548;
+    --text: #eef2fa;
+    --muted: #a3aec1;
+    --blue: #68b5ff;
+    --purple: #c58aff;
+    --green: #70e3a2;
+}
+
+/* ========== GENERAL ========== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    z-index: 999;
+    background: var(--purple);
+    color: var(--bg);
+    padding: 8px 16px;
+}
+
+.skip-link:focus {
+    left: 8px;
+}
+
+/* ========== NAVIGATION ========== */
+
+.site-header {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    border-bottom: 1px solid var(--border);
+    background: rgba(8, 14, 22, 0.95);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    backdrop-filter: blur(12px);
+}
+
+.brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.brand span,
+.accent {
+    color: var(--blue);
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 0.84rem;
+    color: var(--muted);
+}
+
+.site-header nav a:hover {
+    color: var(--purple);
+}
+
+.back-link {
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+/* ========== HERO ========== */
+
+.hero {
+    max-width: 1450px;
+    margin: auto;
+    min-height: 570px;
+
+    padding: 85px 5%;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.eyebrow,
+.code-comment {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: var(--purple);
+    letter-spacing: 0.04em;
+}
+
+.hero h1 {
+    font-size: clamp(3.3rem, 6vw, 5.8rem);
+    line-height: 1.08;
+    letter-spacing: -0.055em;
+
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.intro {
+    max-width: 590px;
+    color: var(--muted);
+    margin: 24px 0 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ========== BUTTONS ========== */
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: #120b1b;
+}
+
+.secondary:hover {
+    border-color: var(--purple);
+    background: #21182e;
+}
+
+/* ========== PROFILE DASHBOARD ========== */
+
+.profile-panel {
+    border: 1px solid var(--border);
+    background: #0d1520;
+    border-radius: 11px;
+    overflow: hidden;
+
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+}
+
+.panel-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 17px 22px;
+
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.status {
+    color: var(--green);
+}
+
+.panel-body {
+    padding: 26px;
+}
+
+.code-comment {
+    color: #7c8aa4;
+}
+
+.profile-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin: 14px 0;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.profile-line span {
+    color: var(--blue);
+}
+
+.profile-line strong {
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    text-align: right;
+}
+
+.panel-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 24px 0;
+}
+
+/* ========== DASHBOARD LINKS ========== */
+
+.mini-links {
+    display: grid;
+    gap: 8px;
+}
+
+.mini-links a {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    background: var(--surface2);
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.83rem;
+
+    transition: 0.2s;
+}
+
+.mini-links a:hover {
+    border-color: var(--purple);
+}
+
+.mini-links a span {
+    color: var(--purple);
+}
+
+/* ========== SECTIONS ========== */
+
+.section {
+    border-top: 1px solid var(--border);
+    padding: 75px max(5%, calc((100% - 1300px) / 2));
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.closing h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin: 8px 0;
+}
+
+.section-heading > p,
+.detail p,
+.closing > p:not(.eyebrow) {
+    color: var(--muted);
+}
+
+/* ========== HOBBY CARDS ========== */
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.hobby-card {
+    min-height: 230px;
+    padding: 24px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--surface);
+    position: relative;
+
+    transition: 0.2s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--purple);
+    background: #191a30;
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+.card-number {
+    position: absolute;
+    right: 23px;
+    top: 22px;
+
+    color: #748099;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.hobby-card h3 {
+    font-size: 1.25rem;
+    margin: 15px 0 5px;
+}
+
+.hobby-card p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0 0 18px;
+}
+
+.card-arrow {
+    color: var(--purple);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+}
+
+/* ========== HOBBY DETAILS ========== */
+
+.detail-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.detail-icon {
+    font-size: 2rem;
+    background: var(--surface2);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 10px;
+}
+
+.detail h2 {
+    font-size: 2rem;
+    margin: 4px 0;
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.detail-layout > div:first-child > p:first-child {
+    max-width: 670px;
+    font-size: 1.03rem;
+}
+
+.detail h3 {
+    margin: 26px 0 4px;
+    font-size: 1rem;
+}
+
+.detail .muted {
+    margin: 4px 0;
+}
+
+/* ========== INTEREST TAGS ========== */
+
+.chips {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.chips span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.77rem;
+
+    color: var(--purple);
+    background: #1c1a2d;
+
+    border: 1px solid #3c3352;
+    border-radius: 5px;
+
+    padding: 6px 10px;
+}
+
+/* ========== GALLERY PLACEHOLDERS ========== */
+
+.media-placeholder {
+    min-height: 245px;
+
+    border: 1px dashed #55506b;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #151728,
+        #101a29
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    gap: 9px;
+    padding: 25px;
+}
+
+.media-placeholder > span {
+    font-size: 3rem;
+}
+
+.media-placeholder strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.86rem;
+    color: #d6c1f2;
+}
+
+.media-placeholder small {
+    color: var(--muted);
+}
+
+/* ========== CLOSING SECTION ========== */
+
+.closing {
+    text-align: center;
+}
+
+.closing > p:not(.eyebrow) {
+    max-width: 650px;
+    margin: 12px auto 30px;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    padding: 25px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+}
+
+.footer-note {
+    color: var(--muted);
+    margin-left: 12px;
+}
+
+footer button {
+    background: none;
+    border: none;
+
+    color: var(--purple);
+    cursor: pointer;
+}
+
+/* ========== TABLET ========== */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding-top: 60px;
+        padding-bottom: 65px;
+    }
+
+    .hobby-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .detail-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .media-placeholder {
+        min-height: 210px;
+    }
+}
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 0 5%;
+    }
+
+    .site-header nav {
+        gap: 12px;
+        font-size: 0.75rem;
+    }
+
+    .site-header nav a:first-child,
+    .site-header nav a:nth-child(2) {
+        display: none;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.7rem, 12vw, 4rem);
+    }
+
+    .panel-body {
+        padding: 20px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-card {
+        min-height: 190px;
+    }
+
+    .detail h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-note {
+        display: none;
+    }
+}
+
+/* ========== ACCESSIBILITY ========== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
